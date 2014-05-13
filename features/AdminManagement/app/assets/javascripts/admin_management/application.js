@@ -12,4 +12,5 @@
 //
 //= require_self
 //= require ./everyday_recommend.js
+//=require ./apply.js
 

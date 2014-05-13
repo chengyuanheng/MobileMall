@@ -13,6 +13,8 @@ CustomerManagement::Engine.routes.draw do
 
   post "delete_order", to:"information#delete_order"
 
+  post "customer_apply", to: "information#customer_apply"
+
   post "pay_for_order", to:"information#pay_for_order"
 
   post "confirm_receipt", to:"information#confirm_receipt"

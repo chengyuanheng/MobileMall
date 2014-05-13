@@ -11,9 +11,13 @@
   %body
     #wrapper
       =render "shared/header"
+      -if is_customer?
+        =render "shared/model"
       .container
         = yield
       =render "shared/footer"
+
+
 
 
 

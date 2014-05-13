@@ -1,0 +1,33 @@
+%div(class="modal fade" id="become_seller" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+  %div(class="modal-dialog")
+    %div(class="modal-content")
+      %div(class="modal-header")
+        %button(type="button" class="close" data-dismiss="modal" aria-hidden="true") &times;
+        %h4(class="modal-title" id="myModalLabel") 申请成为卖家
+      = form_for "customer_apply",:url => {controller:'information', action:'customer_apply'}, :html => {:multipart => true} do |f|
+        %div(class="modal-body")
+          %table.table.table-hover
+            %tbody
+              %tr
+                %td(algin="center") 姓名
+                %td=f.text_field :name, class:"form-control"
+              %tr
+                %td(algin="center") 年龄
+                %td=f.text_field :age, class:"form-control"
+              %tr
+                %td(algin="center") 电话
+                %td= f.text_field :phone, class:"form-control"
+              %tr
+                %td(algin="center") 身份证号
+                %td= f.text_field :ID_number, class:"form-control"
+              %tr
+                %td(algin="center") 地址
+                %td= f.text_field :address, class:"form-control"
+
+          %div
+            = f.file_field :image
+            = f.hidden_field :image_cache
+
+        %div(class="modal-footer" )
+          %input(type="submit" class="btn btn-primary btn-lg" value="提交申请")
+          %input(type="button" class="btn btn-default btn-lg" data-dismiss="modal" value="取消" )

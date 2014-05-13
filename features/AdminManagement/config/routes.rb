@@ -5,6 +5,8 @@ AdminManagement::Engine.routes.draw do
   resources :everyday_recommend
 
   post "everyday_recommend/recommend" =>"everyday_recommend#recommend_update"
+  get "customer_apply" => "apply#handle_customer_apply"
+  post 'change_customer_apply_status'=> "apply#change_customer_apply_status"
 
   #root :to => 'sessions#new'
   get "/signin" => 'sessions#new'

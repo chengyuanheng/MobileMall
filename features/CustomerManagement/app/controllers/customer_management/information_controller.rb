@@ -56,5 +56,11 @@ module CustomerManagement
 
     end
 
+    def customer_apply
+
+      CustomerManagement::CustomerApply.handle_apply(current_user_id, params[:customer_apply])
+
+      redirect_to request.referer
+    end
   end
 end
