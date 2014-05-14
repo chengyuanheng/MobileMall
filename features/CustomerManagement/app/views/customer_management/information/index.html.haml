@@ -1,13 +1,15 @@
 .container
   .row
     #myCarousel.carousel.slide
+      %ol.carousel-indicators
+        -@recommend_logos.each_with_index do |logo,index|
+          %li(data-target="#myCarousel" data-slide-to="#{index}" )
       .carousel-inner
         -@recommend_logos.each_with_index do |logo,index|
           .item(class = "#{index==0?'active':''}")
             #{image_tag(logo.url)}
-
-    %a.carousel-control.left(href="#myCarousel" data-slide="prev") ‹
-    %a.carousel-control.right(href="#myCarousel" data-slide="next") ›
+      %a.carousel-control.left(href="#myCarousel" data-slide="prev") ‹
+      %a.carousel-control.right(href="#myCarousel" data-slide="next") ›
 
   .region
     .block

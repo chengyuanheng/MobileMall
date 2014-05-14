@@ -95,3 +95,6 @@ body{
 .row-fluid {
     text-align: center;
 }
+ol.carousel-indicators {
+    bottom: -6px;
+}
