@@ -25,6 +25,12 @@
                 %td 购买数量：
                 %td= f.number_field :count, class:"form-control", min:"1"
               %tr
+                %td 联系电话：
+                %td= f.text_field :phone, class:"form-control"
+              %tr
+                %td 发货地址：
+                %td= f.text_field :address, class:"form-control"
+              %tr
                 %td= f.submit value:"生成订单", class:"btn btn-primary btn-lg"
 
 

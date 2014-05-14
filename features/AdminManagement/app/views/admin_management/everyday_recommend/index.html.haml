@@ -1,14 +1,18 @@
 %div
   -@all_shop_logos.each do |shops|
     %div
-      %span #{fetch_seller_name(shops[0])}
+      %span 卖家：#{fetch_seller_name(shops[0])}
+    %br
 
     %div
       -shops[1].each do |logo|
         %td
-          %span #{image_tag(logo.url)}
+          %span #{image_tag(logo.url, :class=>"seller_logo_size")}
         %td
           %input(class = "checkbox" id = "checkbox_#{logo.id}" value="#{logo.id}" type="checkbox" onclick = "select_the_checkbox(this)")
-
+%br
 %div
-  %a.btn.btn-default.btn-default-alt(href="javascript:{}" onclick="submit_everyday_recommend()" ) 提交
+  %a.col-xs-12.btn.btn-default.btn-default-alt(href="javascript:{}" onclick="submit_everyday_recommend()" )
+    %strong
+      同意推荐
+

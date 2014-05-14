@@ -71,3 +71,27 @@ body{
 .admin-statistics label{
     width: 25%;
 }
+
+.apply_photo_size{
+    width: 150px;
+    height: 150px;
+}
+
+.seller_logo_size{
+    width: 100%;
+    height: 150px;
+}
+
+.footer {
+    border-top: 1px solid #DDD;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.copyright {
+    color: #919191;
+}
+
+.row-fluid {
+    text-align: center;
+}

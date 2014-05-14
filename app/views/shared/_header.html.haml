@@ -1,6 +1,10 @@
 .navbar.navbar-default.navbar-static-top
   .container
     .navbar-header
+      %button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+        %span(class="icon-bar" )
+        %span(class="icon-bar" )
+        %span(class="icon-bar" )
       %a.navbar-brand(href="#{logo_url}" ) 移动商城
     -if signed_in?
       .navbar-collapse.collapse
@@ -28,7 +32,7 @@
                 %li.divider
               -if is_admin?
                 %li
-                  %a(href="/everyday_recommend" ) 每日推荐
+                  %a(href="/everyday_recommend" ) 处理每日推荐
                 %li.divider
                 %li
                   %a(href="/customer_apply" ) 处理买家申请

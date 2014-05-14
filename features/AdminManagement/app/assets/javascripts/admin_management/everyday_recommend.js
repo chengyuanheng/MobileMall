@@ -38,6 +38,7 @@ function post_checkbox_array_to_server(checkbox_array){
     });
 
     function success_call_back(){
+        alert('推荐成功');
         window.location.reload();
     }
 

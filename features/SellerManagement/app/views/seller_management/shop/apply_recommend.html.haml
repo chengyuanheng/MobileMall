@@ -1,6 +1,10 @@
-%div
+.container
   -@all_logos.each do |logo|
-    %span #{image_tag(logo.url)}
+    .col-sm-12
+      %table.table.table-hover.table-striped
+        %tbody
+          %tr
+            %td= image_tag(logo.url, :class=>"seller_logo_size")
 
 
 

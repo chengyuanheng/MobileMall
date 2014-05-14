@@ -1,11 +1,15 @@
 module CustomerManagement
   class Order < ActiveRecord::Base
-    attr_accessible :product_id, :status, :customer_id, :count
+    attr_accessible :product_id, :status, :customer_id, :count, :phone, :address
 
     def self.create_new_order user_id, order
 
-      create(customer_id:user_id,product_id:order["product_id"],count:order["count"],status:"未付款")
-
+      create(customer_id:user_id,
+             product_id:order["product_id"],
+             count:order["count"],
+             phone:order["phone"],
+             address:order["address"],
+             status:"未付款")
     end
 
     def self.fetch_customer_orders user_id

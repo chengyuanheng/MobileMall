@@ -1,24 +1,29 @@
 .container
   -@all_customer_applies.each do |apply|
-    .col-sm-4
-      %tr
-        %td= image_tag(apply.photo)
-        %td
+    .col-sm-6
+      %table.table.table-hover.table-striped
+        %tbody
           %tr
-            %td 姓名
-            %td= apply.name
+            %td= image_tag(apply.photo, :class=>"apply_photo_size")
+            %td
+              %table.table.table-hover.table-striped
+                %tr
+                  %td 姓名
+                  %td= apply.name
+                %tr
+                  %td 年龄
+                  %td= apply.age
+                %tr
+                  %td 电话
+                  %td= apply.phone
+                %tr
+                  %td 住址
+                  %td= apply.address
+                %tr
+                  %td 身份证号
+                  %td= apply.ID_number
           %tr
-            %td 年龄
-            %td= apply.age
-          %tr
-            %td 电话
-            %td= apply.phone
-          %tr
-            %td 住址
-            %td= apply.address
-          %tr
-            %td 身份证号
-            %td= apply.ID_number
-      .actions
-        %a.btn.btn-sm.btn-primary(herf="#" onclick="change_customer_apply_status(#{apply.id})" )
-          同意申请
+            %td
+            %td
+              %a.pull-right.btn.btn-sm.btn-primary(herf="#" onclick="change_customer_apply_status(#{apply.id})" )
+                同意申请

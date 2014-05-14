@@ -1,4 +1,5 @@
 require_dependency "seller_management/application_controller"
+require "will_paginate/array"
 
 module SellerManagement
   class ShopController < ApplicationController
